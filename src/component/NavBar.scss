@@ -1,0 +1,32 @@
+.section-navbar {
+
+    background-color: rgb(17, 17, 24);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+
+    .navBar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 18px;
+        font-weight: 700;
+        padding: 10px;
+        max-width: 1280px;
+        margin: auto;
+
+        h2 {
+            margin: 0;
+        }
+
+        .other-Comp {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 50px;
+            // gap: 20px;
+        }
+    }
+}

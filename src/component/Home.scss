@@ -1,0 +1,78 @@
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    max-width: 1280px;
+    margin: auto;
+
+    .info {
+        width: 50%;
+        height: 60vh;
+
+        h1 {
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 16px;
+            width: 450px;
+        }
+
+        .button {
+            display: flex;
+            gap: 25px;
+            margin-top: 2rem;
+        }
+
+        .social {
+            display: flex;
+            color: "#ffffff";
+            gap: 30px;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 2rem;
+            font-size: 30px;
+
+            .social-icon {
+                width: 30px;
+
+                :hover {
+                    color: blue;
+                    cursor: pointer;
+                    font-size: 33px;
+                }
+            }
+
+
+        }
+    }
+
+    .img-cover {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+
+        .home-img {
+            margin-top: 50px;
+            background-color: white;
+            width: 280px;
+            height: 280px;
+
+            border-radius: 50%;
+
+            img {
+
+                height: 300px;
+                border-radius: 50%;
+                border-bottom: 8px solid white;
+                object-fit: cover;
+                width: 100%;
+                position: relative;
+                top: -28px;
+                right: 0;
+            }
+        }
+    }
+
+}
