@@ -5,6 +5,7 @@ import profileImg from '../assets/Portfol.png';
 
 function Home() {
     return (
+        // <div className="home cover">
         <div className="home">
             <div className="info">
                 <h1>
@@ -25,16 +26,17 @@ function Home() {
                 </div>
                 <div className="social">
                     <div className="social-icon">
-                        <i className="fa-brands fa-github" ></i>
+                        <a href="https://github.com/ankitjhajhariya"><i className="fa-brands fa-github" ></i></a>
                     </div>
                     <div className="social-icon">
-                        <i className="fa-brands fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/ankit-jhajhariya-07b634278?utm_source=share&utm_
+                        campaign=share_via&utm_content=profile&utm_medium=android_app"><i className="fa-brands fa-linkedin"></i></a>
                     </div>
                     <div className="social-icon">
                         <i className="fa-brands fa-instagram" ></i>
                     </div>
                     <div className="social-icon">
-                        <i className="fa-brands fa-x-twitter" ></i>
+                        <a href=""><i className="fa-brands fa-x-twitter" ></i></a>
                     </div>
                 </div>
             </div>
@@ -44,6 +46,7 @@ function Home() {
                 </div>
             </div>
         </div>
+        // </div>
     );
 }
 

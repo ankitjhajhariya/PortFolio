@@ -1,0 +1,70 @@
+.projects {
+    max-width: 1280px;
+    // margin-top: 6rem;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    height: 100vh;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .card {
+        width: 280px;
+        height: auto;
+        border: 1px solid white;
+        border-radius: 21px;
+        background-color: rgb(0, 0, 21);
+
+
+
+        img {
+            width: 100%;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            object-fit: cover;
+            max-height: 160px;
+        }
+
+        .card-body {
+            padding: 1rem;
+        }
+
+        h3 {
+            margin-top: 0;
+        }
+
+        p {
+            opacity: 0.7;
+        }
+
+        a {
+            text-decoration: none;
+
+
+            button {
+                width: 7rem;
+                height: 2rem;
+                border: none;
+                background-color: gray;
+                color: white;
+                font-weight: 530;
+                font-size: 1rem;
+                border-radius: 0.2rem;
+            }
+
+            :hover {
+                background-color: rgb(47, 153, 47);
+                cursor: pointer;
+
+            }
+        }
+
+
+    }
+
+    .card:hover {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    }
+
+}

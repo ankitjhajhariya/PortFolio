@@ -1,3 +1,4 @@
+// .home-cover {
 .home {
     display: flex;
     justify-content: space-between;
@@ -37,10 +38,15 @@
             .social-icon {
                 width: 30px;
 
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+
                 :hover {
-                    color: blue;
+                    color: rgb(93, 93, 251);
                     cursor: pointer;
-                    font-size: 33px;
+                    // font-size: 31px;
                 }
             }
 
@@ -76,3 +82,5 @@
     }
 
 }
+
+// }

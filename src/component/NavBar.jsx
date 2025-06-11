@@ -1,6 +1,7 @@
 import React from "react";
 import './NavBar.scss'
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
 function NavBar() {
     return (
@@ -11,14 +12,14 @@ function NavBar() {
                         <h2>PortFolio</h2>
                     </div>
                     <div className="other-Comp">
-                        <span>Home</span>
-                        <span>About ME</span>
-                        <span>Projects</span>
-                        <span>Services</span>
+                        <span><Link to="/" style={{ color: '#ffffff', textDecoration: 'none' }}> Home</Link></span>
+                        <span><Link to="about" style={{ color: '#ffffff', textDecoration: 'none' }}>About ME</Link></span>
+                        <span><Link to="projects" style={{ color: '#ffffff', textDecoration: 'none' }}>Projects</Link></span>
+                        <span><Link to="/" style={{ color: '#ffffff', textDecoration: 'none' }}>Services</Link></span>
                         <Button text="Contact Me" col="white" bg="blue" />
                     </div>
                 </div>
-            </section>
+            </section >
         </>
     );
 }
