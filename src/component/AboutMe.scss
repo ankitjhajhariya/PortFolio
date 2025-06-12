@@ -1,26 +1,45 @@
 .aboutme-cover {
     display: flex;
-    height: 100vh;
     align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    min-height: 100vh;
+    box-sizing: border-box;
 
     .aboutme {
-        width: 1280px;
-        margin-left: auto;
-        margin-right: auto;
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 1rem;
 
         h1 {
             text-align: center;
             color: rgb(67, 243, 67);
+            font-size: 2.5rem;
+
+            @media (max-width: 768px) {
+                font-size: 2rem;
+            }
+
+            @media (max-width: 480px) {
+                font-size: 1.8rem;
+            }
         }
 
         p {
-            // align-items: center;
             text-align: center;
             font-size: 1.3rem;
             max-width: 700px;
-            margin: auto;
+            margin: 1rem auto;
+
+            @media (max-width: 768px) {
+                font-size: 1.1rem;
+                padding: 0 1rem;
+            }
+
+            @media (max-width: 480px) {
+                font-size: 1rem;
+            }
         }
     }
-
-
 }

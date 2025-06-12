@@ -1,12 +1,20 @@
 import React from 'react';
+import './Button.scss';
 
-function Button({ text, icon, bg, col }) {
+function Button({ text, link, download = false }) {
     return (
-        <button style={{ padding: '10px', fontSize: '16px', backgroundColor: bg, border: 'none', borderRadius: '0.3rem', color: col }}>
-            {text} {icon}
-        </button>
+        <a
+            href={link}
+            className="btn"
+            {...(download ? { download: true } : {})}
+            target={download ? "_self" : "_blank"}
+            rel={download ? undefined : "noopener noreferrer"}
+            aria-label={text}
+        >
+            <span className="text">{text}</span>
+            {download && <i className="fa-solid fa-download download-icon" aria-hidden="true"></i>}
+        </a>
     );
 }
 
 export default Button;
-

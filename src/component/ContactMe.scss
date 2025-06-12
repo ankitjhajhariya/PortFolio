@@ -1,0 +1,120 @@
+.contact-cover {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .contact-section {
+        padding: 2rem 1rem;
+        background-color: #f6f8fa;
+        text-align: center;
+        max-width: 600px;
+        margin-top: 4rem;
+        border-radius: 2rem;
+        margin: 0 2rem;
+
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            padding: 0 1rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+
+            input,
+            textarea {
+                width: 100%;
+                padding: 0.8rem 1rem;
+                margin-bottom: 1rem;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                font-size: 1rem;
+                box-sizing: border-box;
+            }
+
+            textarea {
+                resize: vertical;
+            }
+
+            button {
+                background-color: #4f46e5;
+                color: white;
+                padding: 0.8rem 2rem;
+                border: none;
+                border-radius: 8px;
+                font-size: 1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: #3730a3;
+                }
+            }
+
+            .success {
+                color: green;
+                margin-top: 1rem;
+                font-weight: 600;
+            }
+        }
+
+        // Responsive adjustments
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            .contact-form {
+
+                input,
+                textarea {
+                    font-size: 0.95rem;
+                    padding: 0.7rem 0.9rem;
+                }
+
+                button {
+                    font-size: 0.95rem;
+                    padding: 0.7rem 1.5rem;
+                }
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            .contact-form {
+
+                input,
+                textarea {
+                    font-size: 0.9rem;
+                    padding: 0.6rem 0.8rem;
+                }
+
+                button {
+                    font-size: 0.9rem;
+                    padding: 0.6rem 1.2rem;
+                }
+            }
+        }
+    }
+}
