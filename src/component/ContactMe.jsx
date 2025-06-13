@@ -16,12 +16,11 @@ function Contact() {
     };
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-
-        if (formData.name && formData.email && formData.message) {
-            console.log('Form Submitted:', formData);
+        if (!formData.name || !formData.email || !formData.message) {
+            e.preventDefault();
+            alert('Please fill in all required fields.');
+        } else {
             setSubmitted(true);
-            setFormData({ name: '', email: '', subject: '', message: '' });
         }
     };
 
@@ -29,8 +28,14 @@ function Contact() {
         <div className="contact-cover">
             <div className="contact-section">
                 <h2>Contact Me</h2>
-                <p>I'd love to hear from you! Fill out the form below and I’ll get back to you shortly.</p>
-                <form onSubmit={handleSubmit} className="contact-form">
+                <p>I’d love to hear from you! Fill out the form below and I’ll get back to you shortly.</p>
+
+                <form
+                    className="contact-form"
+                    action="https://formsubmit.co/ankit.22cse263@rtu.ac.in"
+                    method="POST"
+                    onSubmit={handleSubmit}
+                >
                     <input
                         type="text"
                         name="name"
@@ -62,8 +67,13 @@ function Contact() {
                         onChange={handleChange}
                         required
                     />
+
+                    {/* Optional hidden inputs */}
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you" />
+
                     <button type="submit">Send Message</button>
-                    {submitted && <p className="success">Thanks for reaching out! </p>}
+                    {submitted && <p className="success">Thanks for reaching out!</p>}
                 </form>
             </div>
         </div>
