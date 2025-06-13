@@ -68,7 +68,6 @@ function Contact() {
                         required
                     />
 
-                    {/* Optional hidden inputs */}
                     <input type="hidden" name="_captcha" value="false" />
                     <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you" />
 

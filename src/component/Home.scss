@@ -24,45 +24,38 @@
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
+            line-height: 1.8;
 
-            .animated-text {
+            .typing-container {
                 display: inline-block;
-                height: 3.5rem;
-                overflow: hidden;
-                position: relative;
-                vertical-align: bottom;
+                line-height: 1.21em;
 
-                span {
-                    display: block;
-                    height: 3.5rem;
+                .typing-text {
+                    border-right: 2px solid #42f342;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    display: inline-block;
+                    font-weight: bold;
+                    font-size: inherit;
                     color: #42f342;
-                    animation: changeText 1ms infinite;
+                    animation: blinkCursor 0.7s steps(1) infinite;
+                }
+
+                @keyframes blinkCursor {
+                    0% {
+                        border-color: transparent;
+                    }
+
+                    50% {
+                        border-color: #42f342;
+                    }
+
+                    100% {
+                        border-color: transparent;
+                    }
                 }
             }
-
-            @keyframes changeText {
-                0% {
-                    transform: translateY(0%);
-                }
-
-                25% {
-                    transform: translateY(-100%);
-                }
-
-                50% {
-                    transform: translateY(-200%);
-                }
-
-                75% {
-                    transform: translateY(-300%);
-                }
-
-                100% {
-                    transform: translateY(0%);
-                }
-            }
-
 
             @media (max-width: 768px) {
                 font-size: 2.2rem;
@@ -198,30 +191,4 @@
         }
 
     }
-
-    .typing-text {
-        border-right: 2px solid #42f342;
-        white-space: nowrap;
-        overflow: hidden;
-        display: inline-block;
-        font-weight: bold;
-        font-size: inherit;
-        color: #42f342;
-        animation: blinkCursor 0.7s steps(1) infinite;
-    }
-
-    @keyframes blinkCursor {
-        0% {
-            border-color: transparent;
-        }
-
-        50% {
-            border-color: #42f342;
-        }
-
-        100% {
-            border-color: transparent;
-        }
-    }
-
 }

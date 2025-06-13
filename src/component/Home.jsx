@@ -47,7 +47,6 @@ function Home() {
 
         type();
 
-        // Cleanup on component unmount
         return () => clearTimeout(timeoutId);
     }, []);
 
@@ -56,7 +55,9 @@ function Home() {
             <div className="info">
                 <h1>
                     Hey, I'm <br />
-                    <span className="typing-text" id="typingText"></span>
+                    <div className="typing-container">
+                        <span className="typing-text" id="typingText"></span>
+                    </div>
                 </h1>
 
                 <p>
