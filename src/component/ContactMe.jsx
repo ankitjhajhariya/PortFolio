@@ -16,11 +16,12 @@ function Contact() {
     };
 
     const handleSubmit = (e) => {
+        e.preventDefault();
         if (!formData.name || !formData.email || !formData.message) {
-            e.preventDefault();
             alert('Please fill in all required fields.');
         } else {
             setSubmitted(true);
+            alert("Form submitted successfully.");
         }
     };
 
