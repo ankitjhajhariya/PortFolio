@@ -21,7 +21,7 @@ function Contact() {
             alert('Please fill in all required fields.');
         } else {
             setSubmitted(true);
-            alert("Form submitted successfully.");
+            window.location.href = 'https://port-folio-peit.vercel.app/'
         }
     };
 
